@@ -27,7 +27,7 @@ A Python-based web scraping tool that extracts article titles, translates them, 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tejaspawar/python-selenium-browserstack-assignment.git
 ```
 
 2. Install dependencies:
