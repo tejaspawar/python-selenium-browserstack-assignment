@@ -57,14 +57,8 @@ class HomePage(BasePage):
             AssertionError: If the webpage is not in Spanish language
         """
         self.logger.debug('Ensure the website is in Spanish')
-        self.wait_and_click(self.MENU_BUTTON_OPEN)
-
-        language = self.wait_for_presence(self.SELECTED_LANGUAGE)
-        language_link = language.find_element("xpath", ".//a")
-        language = language_link.get_attribute('href')
-        self.logger.debug(f'Webpage current language specific URL: [{language}]')
-        assert self.URL == language, f"Webpage loaded in [{language}]"
-        self.wait_and_click(self.MENU_BUTTON_CLOSE)
+        language = self.driver.find_element(By.XPATH, "//html").get_attribute('lang')
+        assert language == 'es-ES', f"Webpage loaded in [{language}]"
 
     def go_to_opinion_section(self):
         """

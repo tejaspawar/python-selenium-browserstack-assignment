@@ -9,7 +9,7 @@ import selenium
 from selenium import webdriver
 
 from pages.home_page import HomePage
-from pages.option_page import OpinionPage
+from pages.opinion_page import OpinionPage
 from utils.logger import Logger
 from utils.translator import Translator
 
